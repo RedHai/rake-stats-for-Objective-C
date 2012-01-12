@@ -1,0 +1,26 @@
+Rake stats for objective C (0.0.1-Alpha)
+
+Getting Started
+
+1. Open the stats.rb file, and do some configuration
+
+   STATS_DIRECTORIES lists the directories which must be analysed
+
+   example:
+    
+    STATS_DIRECTORIES = [
+      ["Controllers", "/home/workspace/apphub/app/controllers"],
+      ["Models", "/home/workspace/apphub/app/models"],
+      ["Controllers test", "/home/workspace/apphub/spec/controllers"],
+      ["Models test", "/home/workspace/apphub/spec/models"]
+    ].select { |name, dir| File.directory?(dir) }
+
+    TEST_TYPES lists the directories which contain test codes
+
+    example:
+      
+      TEST_TYPES = ["Controllers test", "Models test"]
+
+2. Run the stats
+
+  $ ruby stats.rb
